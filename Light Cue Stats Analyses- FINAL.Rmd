@@ -16,18 +16,10 @@ output:
 
 ## Data importing
 
-First, we can load the data straight from my computer as follows...
-```{r}
-#library(dplyr)
-#library(readxl)
-#photopattern <- read_excel("/Volumes/EggScience 1/Warkentin Lab/2015 Data/Hatching Phototaxis Data/Diel Hatching Pattern Data.xlsx")
-#photopattern
-```
-
-Or, we can also access this dataset from my Github repository as follows:
+We can access this dataset from my Github repository as follows:
 ```{r}
 library(curl)
-f <- curl("https://raw.githubusercontent.com/bguell/Light-Cue-Manuscript-Final/master/Diel%20Hatching%20Pattern%20Data.csv")
+f <- curl("https://raw.githubusercontent.com/bguell/Red-eyed-treefrogs-use-light-cues/master/Diel%20Hatching%20Pattern%20Data.csv")
 photopattern <- read.csv(f, header = TRUE, sep = ",", stringsAsFactors = TRUE)
 head(photopattern)
 ```
@@ -950,19 +942,10 @@ g
 
 ## Data importing
 
-First, we can load this straight from my computer as follows...
-```{r}
-#library(readxl)
-#phototaxis <- read_excel("/Volumes/EggScience 1/Warkentin Lab/2015 Data/Hatching Phototaxis Data/Hatching Orientation Data.xlsx", sheet = "phototaxis")
-
-#str(phototaxis) #structure of the data; column names, etc.
-#head(phototaxis) #preview the data
-```
-
-Or, anyone can access this dataset from my personal Github repository as follows:
+First, we can load this straight from my personal Github repository as follows:
 ```{r}
 library(curl)
-f <- curl("https://raw.githubusercontent.com/bguell/Light-Cue-Manuscript-Final/master/Hatching%20Orientation%20Data.csv")
+f <- curl("https://raw.githubusercontent.com/bguell/Red-eyed-treefrogs-use-light-cues/master/Hatching%20Orientation%20Data.csv")
 phototaxis <- read.csv(f, header = TRUE, sep = ",", stringsAsFactors = TRUE)
 head(phototaxis)
 ```
